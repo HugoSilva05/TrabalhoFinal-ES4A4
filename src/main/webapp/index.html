@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKY-IFSP</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <a href="#" class="logo"> <i class="fas fa-plane"></i> SKY-IFSP </a>
+      <nav class="navbar">
+        <a href="./index.html">Inicio</a>
+        <a href="./contato.html">Contato</a>
+        <a href="./sobre.html">Sobre</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
+
+    <section style="background: url(./images/background.jpg) no-repeat">
+      <div id="booking" class="section-special">
+        <div class="section-special-center">
+          <div class="container">
+            <div class="button-container">
+              <button class="button-left1" onclick="mostrarConsulta()">
+                Consulta Voo
+              </button>
+              <button class="button-left2" onclick="mostrarReserva()">
+                Minhas Reservas
+              </button>
+              <button class="button-left3" onclick="mostrarVoos()">
+                Alterar Voo
+              </button>
+              <button
+                class="button-right2"
+                onclick="window.location.href='./novo.html';"
+              >
+                Login
+              </button>
+              <button
+                class="button-right1"
+                onclick="window.location.href='./conta.html';"
+              >
+                Conta
+              </button>
+            </div>
+
+            <div class="row" id="consultarViagem">
+              <div class="booking-form">
+                <form>
+                  <div class="form-group">
+                    <div class="form-checkbox">
+                      <label for="roundtrip">
+                        <input type="radio" id="roundtrip" name="flight-type" />
+                        <span></span>IDA E VOLTA
+                      </label>
+                      <label for="one-way">
+                        <input type="radio" id="one-way" name="flight-type" />
+                        <span></span>SOMENTE IDA
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label"
+                          >De onde você está saindo?</span
+                        >
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="Cidade ou aeroporto"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Para onde você vai?</span>
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="Cidade ou aeroporto"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <span class="form-label">Data de Ida</span>
+                        <input class="form-control" type="date" required />
+                      </div>
+                    </div>
+                    <div class="col-md-3" id="destination">
+                      <div class="form-group">
+                        <span class="form-label">Data de Volta</span>
+                        <input class="form-control" type="date" />
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <span class="form-label">Adulto (18+)</span>
+                        <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <span class="form-label">Criança (0-17)</span>
+                        <select class="form-control">
+                          <option>0</option>
+                          <option>1</option>
+                          <option>2</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <span class="form-label">Classe</span>
+                        <select class="form-control">
+                          <option>Economica</option>
+                          <option>Executiva</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-btn">
+                        <button class="submit-btn">Buscar voos</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="row" id="consultarReservas" style="display: none">
+              <div class="booking-form">
+                <div class="table-header">
+                  <div class="text">Reservas de nome do usuário</div>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Código do Voo</th>
+                      <th>Tipo</th>
+                      <th>Data do Voo</th>
+                      <th>Origem</th>
+                      <th>Destino</th>
+                      <th>Assentos</th>
+                      <th>Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>123</td>
+                      <td>Somente Ida</td>
+                      <td>01/06/2023</td>
+                      <td>São Paulo</td>
+                      <td>Rio de Janeiro</td>
+                      <td>2B, 2C</td>
+                      <td>R$ 1500,00</td>
+                    </tr>
+                    <tr>
+                      <td>456</td>
+                      <td>Ida e Volta</td>
+                      <td>05/06/2023</td>
+                      <td>Rio de Janeiro</td>
+                      <td>Espirito Santo</td>
+                      <td>1A</td>
+                      <td>R$ 2300,00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="row" id="alterarVoos" style="display: none">
+              <div class="booking-form">
+                <div class="table-header">
+                  <div class="text">Alteração de Voo</div>
+                </div>
+
+                <div class="form-group">
+                  <span class="form-label"
+                    >Informe o código do voo (disponível em "minhas
+                    reservas")</span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Código do voo"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <span class="form-label">O que você deseja?</span>
+                  <select class="form-control">
+                    <option>Alterar assento</option>
+                    <option>Cancelar voo</option>
+                  </select>
+                  <span class="select-arrow"></span>
+                </div>
+
+                <div class="form-btn">
+                  <button class="submit-btn">Buscar voos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

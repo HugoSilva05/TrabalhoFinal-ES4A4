@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SKY-IFSP</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+
+  <section class="header">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap");
+
+      :root {
+        --blue: #00bfff;
+        --black: #222;
+        --white: #fff;
+        --light-black: #666;
+        --light-white: #ccc;
+        --light-bg: #f5f5f5;
+        --dark-bg: rgba(0, 0, 0, 0.7);
+        --border: 0.1rem solid #aaa;
+        --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        font-family: "Dosis", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
+      }
+
+      * > img {
+        user-select: none;
+        pointer-events: none;
+      }
+
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+
+      html::-webkit-scrollbar {
+        width: 1rem;
+      }
+
+      html::-webkit-scrollbar-track {
+        background-color: var(--white);
+      }
+
+      html::-webkit-scrollbar-thumb {
+        background-color: var(--blue);
+      }
+
+      section {
+        padding: 5rem 10%;
+      }
+
+      .heading {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .heading span {
+        font-size: 2.5rem;
+        color: var(--blue);
+      }
+
+      .heading h3 {
+        font-size: 4.5rem;
+        color: var(--black);
+      }
+
+      .btn {
+        margin-top: 1rem;
+        display: inline-block;
+        background: var(--blue);
+        color: var(--white);
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 1rem 3rem;
+      }
+
+      .btn:hover {
+        letter-spacing: 0.2rem;
+      }
+
+      .header {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: var(--box-shadow);
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        z-index: 1000;
+      }
+
+      .header .logo {
+        font-size: 2.3rem;
+        font-weight: bolder;
+        color: var(--black);
+      }
+
+      .header .logo i {
+        color: var(--blue);
+        padding-right: 0.5rem;
+      }
+
+      .header .navbar a {
+        font-size: 2rem;
+        margin-left: 2rem;
+        color: var(--light-black);
+      }
+
+      .header .navbar a:hover {
+        color: var(--blue);
+      }
+
+      #menu-btn {
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: var(--black);
+        display: none;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          transform: translateY(-4rem) scale(0);
+          opacity: 0;
+        }
+      }
+
+      /* media queries  */
+
+      @media (max-width: 1200px) {
+        section {
+          padding: 3rem 5%;
+        }
+      }
+
+      @media (max-width: 991px) {
+        section {
+          padding: 3rem 2rem;
+        }
+
+        html {
+          font-size: 55%;
+        }
+
+        .home .slide .content h3 {
+          font-size: 15vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #menu-btn {
+          display: inline-block;
+        }
+
+        .fa-times {
+          transform: rotate(180deg);
+        }
+
+        .header .navbar {
+          position: absolute;
+          top: 99%;
+          left: 0;
+          right: 0;
+          background-color: var(--white);
+          border-top: var(--border);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        .header .navbar.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .header .navbar a {
+          display: block;
+          margin: 2rem;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          top: initial;
+          bottom: 1rem;
+        }
+
+        .menu .slide .box-container .box {
+          flex-flow: column;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 450px) {
+        html {
+          font-size: 50%;
+        }
+
+        .home .slide .content h3 {
+          font-size: 7rem;
+        }
+      }
+    </style>
+    <a href="#" class="logo"> <i class="fas fa-plane"></i> SKY-IFSP </a>
+    <nav class="navbar">
+      <a href="../index.html">Inicio</a>
+      <a href="../contato.html">Contato</a>
+      <a href="../sobre.html">Sobre</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </section>
+
+  <body>
+    <div class="main">
+      <section class="signup">
+        <div class="container">
+          <div class="signup-content">
+            <div class="signup-form">
+              <h2 class="form-title">Criar conta</h2>
+              <form action="novousuario" class="register-form" id="register-form">
+                <div class="form-group">
+                  <label for="name"
+                    ><i class="zmdi zmdi-account material-icons-name"></i
+                  ></label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Seu nome"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"><i class="zmdi zmdi-email"></i></label>
+                  <input
+                    type="e	mail"
+                    name="email"
+                    id="email"
+                    placeholder="Seu Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"><i class="zmdi zmdi-map"></i></label>
+                  <input
+                    type="text"
+                    name="endereco"
+                    id="endereco"
+                    placeholder="Seu Endereço"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"><i class="zmdi zmdi-phone"></i></label>
+                  <input
+                    type="number"
+                    name="telefone"
+                    id="telefone"
+                    placeholder="Seu Telefone"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                  <input
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    pattern=".{6,20}"
+                    required
+                    placeholder="Defina sua senha"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="re-pass"
+                    ><i class="zmdi zmdi-lock-outline"></i
+                  ></label>
+                  <input
+                    type="password"
+                    name="re_pass"
+                    id="re_pass"
+                    pattern=".{6,20}"
+                    required
+                    placeholder="Repita sua senha"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    name="agree-term"
+                    id="agree-term"
+                    class="agree-term"
+                    required
+                  />
+                  <label for="agree-term" class="label-agree-term"
+                    ><span><span></span></span>Li e estou de acordo com o
+                    <a href="#" class="term-service">Termo de Uso</a></label
+                  >
+                </div>
+                <div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="signup"
+                    id="signup"
+                    class="form-submit"
+                    value="Registrar"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="signup-image">
+              <figure>
+                <img src="images/signup-image.jpg" alt="sing up image" />
+              </figure>
+              <a href="./velho.html" class="signup-image-link"
+                >Já sou um usário SKY-IFSP</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="popup" id="termsPopup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2>Termos de Serviço</h2>
+
+          <p>
+            Ao usar este site, você concorda com os seguintes termos de serviço:
+          </p>
+
+          <ol>
+            <li>
+              <strong>Uso adequado:</strong> Você concorda em usar este site
+              apenas para fins legais e de acordo com as leis aplicáveis.
+            </li>
+            <li>
+              <strong>Propriedade intelectual:</strong> Todos os conteúdos
+              presentes neste site, incluindo texto, imagens, logotipos e
+              gráficos, são de propriedade exclusiva deste site, a menos que
+              indicado de outra forma.
+            </li>
+            <li>
+              <strong>Responsabilidade:</strong> Este site não se responsabiliza
+              por qualquer perda ou dano causado pelo uso deste site ou pelas
+              informações contidas nele.
+            </li>
+            <li>
+              <strong>Privacidade:</strong> As informações pessoais fornecidas
+              por você serão tratadas de acordo com nossa política de
+              privacidade.
+            </li>
+            <li>
+              <strong>Alterações nos termos:</strong> Reservamo-nos o direito de
+              alterar estes termos de serviço a qualquer momento, sem aviso
+              prévio. Recomendamos que você revise os termos regularmente.
+            </li>
+          </ol>
+
+          <p>
+            Ao continuar a usar este site, você concorda com estes termos de
+            serviço. Se você não concorda com estes termos, por favor, não
+            utilize este site.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

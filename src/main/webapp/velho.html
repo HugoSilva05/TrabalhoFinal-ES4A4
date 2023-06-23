@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SKY-IFSP</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+
+  <section class="header">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap");
+
+      :root {
+        --blue: #00bfff;
+        --black: #222;
+        --white: #fff;
+        --light-black: #666;
+        --light-white: #ccc;
+        --light-bg: #f5f5f5;
+        --dark-bg: rgba(0, 0, 0, 0.7);
+        --border: 0.1rem solid #aaa;
+        --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        font-family: "Dosis", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
+      }
+
+      * > img {
+        user-select: none;
+        pointer-events: none;
+      }
+
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+
+      html::-webkit-scrollbar {
+        width: 1rem;
+      }
+
+      html::-webkit-scrollbar-track {
+        background-color: var(--white);
+      }
+
+      html::-webkit-scrollbar-thumb {
+        background-color: var(--blue);
+      }
+
+      section {
+        padding: 5rem 10%;
+      }
+
+      .heading {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .heading span {
+        font-size: 2.5rem;
+        color: var(--blue);
+      }
+
+      .heading h3 {
+        font-size: 4.5rem;
+        color: var(--black);
+      }
+
+      .btn {
+        margin-top: 1rem;
+        display: inline-block;
+        background: var(--blue);
+        color: var(--white);
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 1rem 3rem;
+      }
+
+      .btn:hover {
+        letter-spacing: 0.2rem;
+      }
+
+      .header {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: var(--box-shadow);
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        z-index: 1000;
+      }
+
+      .header .logo {
+        font-size: 2.3rem;
+        font-weight: bolder;
+        color: var(--black);
+      }
+
+      .header .logo i {
+        color: var(--blue);
+        padding-right: 0.5rem;
+      }
+
+      .header .navbar a {
+        font-size: 2rem;
+        margin-left: 2rem;
+        color: var(--light-black);
+      }
+
+      .header .navbar a:hover {
+        color: var(--blue);
+      }
+
+      #menu-btn {
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: var(--black);
+        display: none;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          transform: translateY(-4rem) scale(0);
+          opacity: 0;
+        }
+      }
+
+      /* media queries  */
+
+      @media (max-width: 1200px) {
+        section {
+          padding: 3rem 5%;
+        }
+      }
+
+      @media (max-width: 991px) {
+        section {
+          padding: 3rem 2rem;
+        }
+
+        html {
+          font-size: 55%;
+        }
+
+        .home .slide .content h3 {
+          font-size: 15vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #menu-btn {
+          display: inline-block;
+        }
+
+        .fa-times {
+          transform: rotate(180deg);
+        }
+
+        .header .navbar {
+          position: absolute;
+          top: 99%;
+          left: 0;
+          right: 0;
+          background-color: var(--white);
+          border-top: var(--border);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        .header .navbar.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .header .navbar a {
+          display: block;
+          margin: 2rem;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          top: initial;
+          bottom: 1rem;
+        }
+
+        .menu .slide .box-container .box {
+          flex-flow: column;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 450px) {
+        html {
+          font-size: 50%;
+        }
+
+        .home .slide .content h3 {
+          font-size: 7rem;
+        }
+      }
+    </style>
+    <a href="#" class="logo"> <i class="fas fa-plane"></i> SKY-IFSP </a>
+    <nav class="navbar">
+      <a href="./index.html">Inicio</a>
+      <a href="./contato.html">Contato</a>
+      <a href="./sobre.html">Sobre</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </section>
+
+  <body>
+    <div class="main">
+      <section class="sign-in">
+        <div class="container">
+          <div class="signin-content">
+            <div class="signin-image">
+              <figure>
+                <img src="images/signin-image.jpg" alt="sing up image" />
+              </figure>
+              <a href="./novo.html" class="signup-image-link"
+                >Crie uma nova conta</a
+              >
+            </div>
+
+            <div class="signin-form">
+              <h2 class="form-title">Acessar conta</h2>
+              <form method="POST" class="register-form" id="login-form">
+                <div class="form-group">
+                  <label for="your_name"
+                    ><i class="zmdi zmdi-account material-icons-name"></i
+                  ></label>
+                  <input
+                    type="text"
+                    name="your_name"
+                    id="your_name"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                  <input
+                    type="password"
+                    name="your_pass"
+                    id="your_pass"
+                    placeholder="Senha"
+                  />
+                </div>
+                <div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="signin"
+                    id="signin"
+                    class="form-submit"
+                    value="Entrar"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

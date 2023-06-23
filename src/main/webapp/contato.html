@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKY-IFSP</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <a href="#" class="logo"> <i class="fas fa-plane"></i> SKY-IFSP </a>
+      <nav class="navbar">
+        <a href="./index.html">Inicio</a>
+        <a href="./contato.html">Contato</a>
+        <a href="./sobre.html">Sobre</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
+
+    <section class="post">
+      <div
+        class="post-header"
+        style="background: url(./images/home-referencias.jpg) no-repeat"
+      >
+        <div class="title">
+          <h3>Contato</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="heading">
+        <h3>Tem alguma sugestão ou reclamação? Nos envie um email por aqui</h3>
+      </div>
+
+      <div class="container">
+        <form action="https://formspree.io/f/moqzolpn">
+          <input type="text" name="Name" placeholder="Seu nome" required />
+          <input
+            type="email"
+            name="Email Address"
+            placeholder="Seu@email.com"
+            required
+          />
+          <input
+            type="number"
+            name="Phone Number"
+            placeholder="Seu telefone"
+            required
+          />
+          <textarea name="Message" placeholder="Mensagem" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>
